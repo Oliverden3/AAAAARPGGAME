@@ -21,7 +21,7 @@ public class MainAttack : MonoBehaviour
             GameObject go1;
             go1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
             go1.transform.position = location;
+            go1.AddComponent<DestroyAfterTime>();
         }
     }
-
-}
+    }
