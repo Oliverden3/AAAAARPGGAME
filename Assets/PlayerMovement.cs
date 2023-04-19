@@ -15,13 +15,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // read input axes
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
     {
         // apply movement to rigidbody
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
         rb2d.MovePosition(rb2d.position + movement.normalized * speed * Time.fixedDeltaTime);
     }
 }
