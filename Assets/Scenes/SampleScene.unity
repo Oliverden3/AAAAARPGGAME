@@ -10843,6 +10843,10 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[0].m_RefCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6200319104525881498, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7435189373407899255, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_Points.Array.size
       value: 6
@@ -10917,6 +10921,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8171242562756442807, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8810552886433527675, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
