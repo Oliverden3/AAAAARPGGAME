@@ -4,25 +4,36 @@ using UnityEngine;
 
 public class MainAttack : MonoBehaviour
 {
-    private GameObject playerObj = null;
-    Vector2 location;
+  public GameObject attackCone;
+  SpriteRenderer spriteR;
+  PolygonCollider2D m_Collider;
+  bool isAttacking;
+
     // Start is called before the first frame update
-    void Start()
+  void Start()
     {
-      playerObj = GameObject.Find("Player");
+      spriteR = attackCone.GetComponent<SpriteRenderer>();
+      m_Collider = attackCone.GetComponent<PolygonCollider2D>();
+      spriteR.enabled = false;
+      m_Collider.enabled = false;
+      isAttacking = false;
     }
 
     // Update is called once per frame
-    void Update()
+  void Update()
     {
-         if (Input.GetMouseButtonDown(0)){
-            location = playerObj.transform.position;
-            GameObject go1;
-            go1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            go1.transform.position = location;
-            go1.AddComponent<DestroyAfterTime>();
-            go1.transform.rotation = Quaternion.LookRotation(Vector3.forward, Input.mousePosition - go1.transform.position);
-            
-        }
+      if (Input.GetMouseButtonDown(0) && isAttacking == false){
+        spriteR.enabled = true;
+        m_Collider.enabled = true;
+        isAttacking = true;
+        Debug.Log("IS ATTACKING");
+        StartCoroutine(WaitASec());
+      }
     }
+  IEnumerator WaitASec(){
+    yield return new WaitForSeconds(0.5f);
+    spriteR.enabled = false;
+    m_Collider.enabled = false;
+    isAttacking = false;
     }
+}
