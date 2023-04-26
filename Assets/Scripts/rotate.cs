@@ -5,6 +5,9 @@ using UnityEngine;
 public class rotate : MonoBehaviour
 {
     public GameObject target;
+   // public Camera sceneCamera;
+    //Vector2 mousePos;
+    //Vector2 playerPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +28,13 @@ public class rotate : MonoBehaviour
         Vector3 look = transform.InverseTransformPoint(target.transform.position);
         float Angle = Mathf.Atan2(look.y,look.x) * Mathf.Rad2Deg;
         transform.Rotate(0,0,Angle);
+    
+        /*
+         mousePos = sceneCamera.ScreenToWorldPoint(Input.mousePosition);
+         playerPos = new Vector2(transform.position.x,transform.position.y);
+        Vector2 lookDirection = mousePos - playerPos;
+        float theDirection = Mathf.Atan2(lookDirection.y,lookDirection.x)*Mathf.Rad2Deg - 90f;
+        transform.Rotate(0, 0, theDirection, Space.World);
+        */
     }
 }
