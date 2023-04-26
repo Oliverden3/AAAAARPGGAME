@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlimeEnemy : MonoBehaviour
 {
     [Header("Attack Parameters")]
-    [SerializeField] private float attackCooldown;
+    [SerializeField] private float attackCooldown; // some some
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
