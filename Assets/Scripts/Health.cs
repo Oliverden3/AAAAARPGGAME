@@ -1,9 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-
-
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +17,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        Debug.Log(gameObject.name + " is taking " + damage + " damage. Current health: " + currentHealth); // Debug message
 
         if (currentHealth <= 0)
         {
@@ -36,9 +31,12 @@ public class Health : MonoBehaviour
         {
             animator.SetBool("die", true);
             OnDeath.Invoke();
+            Destroy(gameObject, 1f); // delay of 1 second
         }
     }
-    public int SendCurrentHealth(){
+
+    public int SendCurrentHealth()
+    {
         return currentHealth;
     }
 }
