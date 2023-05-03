@@ -38,4 +38,7 @@ public class Health : MonoBehaviour
             OnDeath.Invoke();
         }
     }
+    public int SendCurrentHealth(){
+        return currentHealth;
+    }
 }
