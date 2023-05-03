@@ -1,13 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlimePatrol : MonoBehaviour
 {
-    [Header("Patrol Points")]
-    [SerializeField] private Transform patrolPointA;
-    [SerializeField] private Transform patrolPointB;
-
     [Header("Enemy")]
     [SerializeField] private Transform enemy;
 
@@ -15,62 +9,39 @@ public class SlimePatrol : MonoBehaviour
     [SerializeField] private float speed;
 
     private Vector3 initScale;
-    private Vector3 targetPosition;
-    private Vector3 previousPosition;
-
-    [Header("Idle Behaviour")]
-    [SerializeField] private float idleDuration;
-    private float idleTimer;
-    private bool isIdling;
 
     [Header("Enemy Animator")]
     [SerializeField] private Animator anim;
 
+    private Transform player;
+
     private void Awake()
     {
         initScale = enemy.localScale;
-        targetPosition = patrolPointA.position;
-        previousPosition = patrolPointB.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
     {
-        if (!isIdling)
+        if(Vector2.Distance(enemy.position, player.position) < 1.5f)
         {
-            MoveTowardsTarget();
-
-            if (Vector3.Distance(enemy.position, targetPosition) <= 0.1f)
-            {
-                isIdling = true;
-            }
-        }
-        else
-        {
-            idleTimer += Time.deltaTime;
-
-            if (idleTimer >= idleDuration)
-            {
-                isIdling = false;
-                idleTimer = 0;
-
-                Transform temp = patrolPointA;
-                patrolPointA = patrolPointB;
-                patrolPointB = temp;
-                targetPosition = patrolPointA.position;
-                previousPosition = patrolPointB.position;
-            }
+            anim.SetBool("moving", false);
+            return;
         }
 
-        anim.SetBool("moving", !isIdling);
+        MoveTowardsPlayer();
     }
 
-    private void MoveTowardsTarget()
+    private void MoveTowardsPlayer()
     {
+        Vector3 direction = (player.position - enemy.position).normalized;
         float step = speed * Time.deltaTime;
-        enemy.position = Vector3.MoveTowards(enemy.position, targetPosition, step);
+        enemy.position = Vector3.MoveTowards(enemy.position, player.position, step);
 
         // Make enemy face the direction it is moving based on the x-axis
-        int direction = targetPosition.x > previousPosition.x ? 1 : -1;
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * direction, initScale.y, initScale.z);
+        int directionFacing = direction.x > 0 ? 1 : -1;
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * directionFacing, initScale.y, initScale.z);
+
+        anim.SetBool("moving", true);
     }
 }

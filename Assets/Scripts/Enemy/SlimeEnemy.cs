@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlimeEnemy : MonoBehaviour
 {
     [Header("Attack Parameters")]
-    [SerializeField] private float attackCooldown; // some some
+    [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
@@ -36,14 +36,19 @@ public class SlimeEnemy : MonoBehaviour
 
         if (PlayerInSight())
         {
+                //Debug.Log("Cooldown timer: " + cooldownTimer);
+                //Debug.Log("Attack cooldown: " + attackCooldown);
+            slimePatrol.enabled = false; // Stop moving when in sight
             if (cooldownTimer >= attackCooldown)
             {
+            //Debug.Log("Preparing to attack!");
                 Attack();
-                Debug.Log("attack");
             }
         }
-        if(slimePatrol != null){
-            slimePatrol.enabled = !PlayerInSight();
+        else if(slimePatrol != null)
+        {
+            slimePatrol.enabled = true; // Resume moving when not in sight
+
         }
     }
 
@@ -56,7 +61,7 @@ public class SlimeEnemy : MonoBehaviour
         if (hit.collider != null)
         {
             playerHealth = hit.collider.GetComponent<Health>();
-            Debug.Log("Player in sight: " + PlayerInSight());
+            //Debug.Log("Player spotted!");
         }
 
         return hit.collider != null;
@@ -71,8 +76,10 @@ public class SlimeEnemy : MonoBehaviour
 
     private void Attack()
     {
-        cooldownTimer = 0;
+        Debug.Log("Attacking!!!!!!!");
         anim.SetTrigger("meleeAttack");
+        cooldownTimer = 0;
+
     }
 
     private void DamagePlayer()
