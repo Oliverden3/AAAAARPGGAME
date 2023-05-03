@@ -28,6 +28,10 @@ public class SlimePatrol : MonoBehaviour
             anim.SetBool("moving", false);
             return;
         }
+        else
+        {
+            anim.SetBool("moving", true);
+        }
 
         MoveTowardsPlayer();
     }
