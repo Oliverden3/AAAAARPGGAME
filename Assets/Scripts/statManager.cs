@@ -5,7 +5,7 @@ using UnityEngine;
 public class statManager : MonoBehaviour
 {
     GameObject playerObj;
-    public float maxHealth;
+    public int maxHealth;
     public int damage;
     public float speed;
     // Start is called before the first frame update
@@ -26,5 +26,7 @@ public class statManager : MonoBehaviour
         movement.speed = speed;
         DamageField df = mainAttack.GetComponent<DamageField>();
         df.changeDamage(damage);
+        PlayerHealth playerHealth = playerObj.GetComponent<PlayerHealth>();
+        playerHealth.BeginningHealth(maxHealth);
     }
 }
