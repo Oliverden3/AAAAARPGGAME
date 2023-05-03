@@ -3,7 +3,7 @@ using UnityEngine;
 public class SlimePatrol : MonoBehaviour
 {
     [Header("Enemy")]
-    [SerializeField] private Transform enemy;
+    [SerializeField] private Transform enemy; //delete this
 
     [Header("Movement parameters")]
     [SerializeField] private float speed;
