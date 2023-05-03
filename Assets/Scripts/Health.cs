@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         {
             animator.SetBool("die", true);
             OnDeath.Invoke();
-            Destroy(gameObject, 1f); // delay of 1 second
+            Destroy(gameObject, 0.7f); // delay of 1 second
         }
     }
 
