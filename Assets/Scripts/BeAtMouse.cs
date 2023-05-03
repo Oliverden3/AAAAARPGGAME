@@ -17,7 +17,6 @@ void Update()
     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
     Vector3 location = new Vector3(worldPosition.x, worldPosition.y, 0f);
     transform.position = location;
-    Debug.Log(location);
 }
 
 }
