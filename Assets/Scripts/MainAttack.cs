@@ -26,7 +26,6 @@ public class MainAttack : MonoBehaviour
         spriteR.enabled = true;
         m_Collider.enabled = true;
         isAttacking = true;
-        Debug.Log("IS ATTACKING");
         StartCoroutine(WaitASec());
       }
     }
