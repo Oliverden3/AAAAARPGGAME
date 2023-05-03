@@ -19,7 +19,7 @@ public class SlimeEnemy : MonoBehaviour
 
     // References
     private Animator anim;
-    private Health playerHealth;
+    private PlayerHealth playerHealth;
 
     private SlimePatrol slimePatrol;
 
@@ -60,7 +60,7 @@ public class SlimeEnemy : MonoBehaviour
 
         if (hit.collider != null)
         {
-            playerHealth = hit.collider.GetComponent<Health>();
+            playerHealth = hit.collider.GetComponent<PlayerHealth>();
             //Debug.Log("Player spotted!");
         }
 
