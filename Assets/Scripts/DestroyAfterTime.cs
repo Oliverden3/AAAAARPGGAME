@@ -7,7 +7,7 @@ public class DestroyAfterTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WaitASec());
+        //StartCoroutine(WaitASec());
     }
 
     // Update is called once per frame
@@ -15,6 +15,7 @@ public class DestroyAfterTime : MonoBehaviour
     {
         
     }
+    void die(){StartCoroutine(WaitASec());}
     IEnumerator WaitASec(){
     yield return new WaitForSeconds(1);
     Destroy(gameObject);
