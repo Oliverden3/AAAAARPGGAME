@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 1454095819766124050}
   - component: {fileID: 8294007175252226886}
   - component: {fileID: 3424659609304439864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 7735012066234094999}
   - component: {fileID: 407565350533129724}
   - component: {fileID: 9104906130066988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
