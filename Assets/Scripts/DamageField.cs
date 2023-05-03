@@ -7,7 +7,7 @@ public class DamageField : MonoBehaviour
     SpriteRenderer spriteR;
     PolygonCollider2D m_Collider;
     bool isAttacking;
-    public int damage;
+    private int damage;
     // Start is called before the first frame update
     void Start()
     {
