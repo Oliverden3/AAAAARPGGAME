@@ -36,8 +36,7 @@ public class EnemyBehavior : MonoBehaviour
             float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
 
-            Debug.Log("Distance to player: " + distanceToTarget);
-            Debug.Log("Cooldown timer: " + cooldownTimer);
+    
             
             if (distanceToTarget <= attackRange && cooldownTimer <= 0)
             {
