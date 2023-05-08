@@ -646,6 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5204119249372528082, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
+    - {fileID: 5204119249372528084, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
 --- !u!95 &6744504474332340494 stripped
 Animator:
