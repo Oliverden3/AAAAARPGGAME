@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!61 &859057118 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7632984088103185630, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+  m_PrefabInstance: {fileID: 2579483358919270048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1243914055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,6 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
+--- !u!4 &1732401796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2210384210171522946, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
+  m_PrefabInstance: {fileID: 1243914055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1759598591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10138,13 +10148,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1732401796}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: boxCollider
+      value: 
+      objectReference: {fileID: 859057118}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: colliderDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4487691364481730038, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5201112197754845361, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6472286195722035396, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632984088103185570, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.6977286
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632984088103185570, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.0635676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632984088103185570, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.1728
+      objectReference: {fileID: 0}
+    - target: {fileID: 7632984088103185570, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.2909
       objectReference: {fileID: 0}
     - target: {fileID: 9076074121458421650, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: range
