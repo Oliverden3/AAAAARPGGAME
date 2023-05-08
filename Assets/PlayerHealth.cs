@@ -6,10 +6,13 @@ public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth;
     private int currentHealth;
+    [SerializeField] private Canvas HealthBarCanvas;
+    private HealthbarFill healthBar;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthBar = HealthBarCanvas.GetComponent<HealthbarFill>();
+
     }
 
     // Update is called once per frame
@@ -23,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage){
         currentHealth =  currentHealth-damage;
-    Debug.Log("you took damage"+ currentHealth);
+    healthBar.updateHealthBar(currentHealth,maxHealth);
+    Debug.Log("you took damage "+ currentHealth);
     }
 }
