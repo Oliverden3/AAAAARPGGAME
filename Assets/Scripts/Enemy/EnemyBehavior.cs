@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    public Transform player; // The player's transform
+    public Transform player; //The player's transform
 
     public float speed = 3f; // The speed at which the enemy moves towards the player
     public float attackRange = 2f; // The distance at which the enemy can attack the player
