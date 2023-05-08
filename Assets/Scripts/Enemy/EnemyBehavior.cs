@@ -11,7 +11,7 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
-    private float cooldownTimer = Mathf.Infinity;
+    private float cooldownTimer = 2f;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -35,6 +35,10 @@ public class EnemyBehavior : MonoBehaviour
         {
             float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
+
+            Debug.Log("Distance to player: " + distanceToTarget);
+            Debug.Log("Cooldown timer: " + cooldownTimer);
+            
             if (distanceToTarget <= attackRange && cooldownTimer <= 0)
             {
                 Debug.Log("Attacking player!");
