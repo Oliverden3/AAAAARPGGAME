@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 493986322037270187, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 797317300492448904, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2114,7 +2118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722306824244686666, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_Tiles.Array.data[132].second.m_AllTileFlags
-      value: 0
+      value: 1073741825
       objectReference: {fileID: 0}
     - target: {fileID: 5722306824244686666, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_Tiles.Array.data[151].second.m_AllTileFlags
@@ -2718,7 +2722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5722306824244686666, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_Tiles.Array.data[132].second.m_TileObjectToInstantiateIndex
-      value: 0
+      value: 65535
       objectReference: {fileID: 0}
     - target: {fileID: 5722306824244686666, guid: 772079bf68adf2c419a8308c1d59fff0, type: 3}
       propertyPath: m_Tiles.Array.data[151].second.m_TileObjectToInstantiateIndex
@@ -10133,6 +10137,22 @@ PrefabInstance:
     - target: {fileID: 2579483359792821210, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4487691364481730038, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6472286195722035396, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076074121458421650, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: range
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076074121458421650, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: colliderDistance
+      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
