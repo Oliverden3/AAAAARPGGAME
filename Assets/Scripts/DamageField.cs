@@ -7,7 +7,7 @@ public class DamageField : MonoBehaviour
     SpriteRenderer spriteR;
     PolygonCollider2D m_Collider;
     bool isAttacking;
-    public int damage;
+    private int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,7 @@ public class DamageField : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && isAttacking == false){
-        spriteR.enabled = true;
-        m_Collider.enabled = true;
-        isAttacking = true;
-        StartCoroutine(WaitASec());
+        Attack();
       }
         
     }
@@ -41,10 +38,20 @@ public class DamageField : MonoBehaviour
     public void changeDamage(int newDamage){
         damage = newDamage;
     }
-      IEnumerator WaitASec(){
+    private void Attack(){
+      spriteR.enabled = true;
+        m_Collider.enabled = true;
+        isAttacking = true;
+        StartCoroutine(WaitASec());
+    }
+    IEnumerator WaitASec(){
     yield return new WaitForSeconds(0.5f);
     spriteR.enabled = false;
     m_Collider.enabled = false;
-    isAttacking = false;
+    StartCoroutine(AttackCooldown());
+    }
+    IEnumerator AttackCooldown(){
+      yield return new WaitForSeconds(2.0f);
+      isAttacking = false;
     }
 }

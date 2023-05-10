@@ -6,6 +6,7 @@ public class rotate : MonoBehaviour
 {
     public GameObject target;
     public GameObject sprite;
+    public GameObject HealthBar;
     private Rigidbody2D rb;
    // public Camera sceneCamera;
     //Vector2 mousePos;
@@ -33,6 +34,7 @@ public class rotate : MonoBehaviour
         rb.freezeRotation = false;
         transform.Rotate(0,0,Angle);
         rb.freezeRotation = true;
+        //HealthBar.transform.Rotate(0,0,-Angle);
         sprite.transform.Rotate(0,0,-Angle);
         /*
          mousePos = sceneCamera.ScreenToWorldPoint(Input.mousePosition);

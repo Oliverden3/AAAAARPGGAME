@@ -19,7 +19,7 @@ public class SlimeEnemy : MonoBehaviour
 
     // References
     private Animator anim;
-    private Health playerHealth;
+    private PlayerHealth playerHealth;
 
     private SlimePatrol slimePatrol;
 
@@ -52,20 +52,27 @@ public class SlimeEnemy : MonoBehaviour
         }
     }
 
-    private bool PlayerInSight()
-    {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x,
-            new Vector3(boxCollider.bounds.size.x * colliderDistance, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-            0, Vector2.left, 0, playerLayer);
+   private bool PlayerInSight()
+   {
+       Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
-        if (hit.collider != null)
-        {
-            playerHealth = hit.collider.GetComponent<Health>();
-            //Debug.Log("Player spotted!");
-        }
+       RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + (Vector3)direction * range * transform.localScale.x,
+           new Vector3(boxCollider.bounds.size.x * colliderDistance, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
+           0, direction, 0, playerLayer);
 
-        return hit.collider != null;
-    }
+       if (hit.collider != null)
+       {
+           playerHealth = hit.collider.GetComponent<PlayerHealth>();
+           Debug.Log("Player spotted!");
+       }
+       else
+       {
+           Debug.Log("Player not in sight!");
+       }
+
+       return hit.collider != null;
+   }
+
 
     private void OnDrawGizmos()
     {
