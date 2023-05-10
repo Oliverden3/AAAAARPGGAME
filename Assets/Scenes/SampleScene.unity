@@ -150,6 +150,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2785153298407578115, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5708345160726723513, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
       propertyPath: m_Name
       value: AndersScene
@@ -10173,6 +10177,18 @@ PrefabInstance:
     - target: {fileID: 5201112197754845361, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: maxHealth
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: spawnRadius
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: waveInterval
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: numEnemiesPerWave
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6472286195722035396, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_LocalPosition.x
