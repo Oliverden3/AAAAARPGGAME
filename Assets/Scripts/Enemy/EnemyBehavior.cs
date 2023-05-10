@@ -40,7 +40,7 @@ public class EnemyBehavior : MonoBehaviour
             
             if (distanceToTarget <= attackRange && cooldownTimer <= 0)
             {
-                Debug.Log("Attacking player!");
+                
                 Attack();
             }
             else
@@ -55,6 +55,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Attack()
     {
+        Debug.Log("Attacking player!");
         anim.SetTrigger("meleeAttack");
         DamagePlayer();
         cooldownTimer = attackCooldown;

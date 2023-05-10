@@ -128,6 +128,11 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 7632984088103185630, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
   m_PrefabInstance: {fileID: 2579483358919270048}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &859057119 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7632984088103185629, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+  m_PrefabInstance: {fileID: 2579483358919270048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1243914055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10162,7 +10167,7 @@ PrefabInstance:
       objectReference: {fileID: 1732401796}
     - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: attackRange
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3000751520042479003, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: boxCollider
@@ -10181,8 +10186,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5201112197754845361, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 859057119}
+    - target: {fileID: 5201112197754845361, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6472286195722035396, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_LocalPosition.x
