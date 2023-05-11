@@ -25,6 +25,9 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Start()
     {
+        if (!player)
+            player = GameObject.Find("Player").transform;
+
         anim = GetComponent<Animator>();
         playerHealth = player.GetComponent<PlayerHealth>();
     }
