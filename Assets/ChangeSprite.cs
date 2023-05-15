@@ -9,6 +9,10 @@ public class ChangeSprite : MonoBehaviour
     public Sprite hero2;
     public Sprite hero3;
     public Sprite hero4;
+    public Sprite hero5;
+    public Sprite hero6;
+    public Sprite hero7;
+    public Sprite hero8;
 
     private SpriteRenderer spriteRenderer;
     private Vector2 oldPosition;
@@ -26,8 +30,24 @@ public class ChangeSprite : MonoBehaviour
         if(newPosition != oldPosition){
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+        if(newPosition.x>oldPosition.x && newPosition.y>oldPosition.y){
+            spriteRenderer.flipX = false;
+            spriteRenderer.sprite = hero5;
+        }
+         else if(newPosition.x<oldPosition.x && newPosition.y>oldPosition.y){
+            spriteRenderer.flipX = false;
+            spriteRenderer.sprite = hero6;
+        }
+        else if(newPosition.x>oldPosition.x && newPosition.y<oldPosition.y){
+            spriteRenderer.flipX = false;
+            spriteRenderer.sprite = hero7;
+        }
+        else if(newPosition.x<oldPosition.x && newPosition.y<oldPosition.y){
+            spriteRenderer.flipX = false;
+            spriteRenderer.sprite = hero8;
+        }
 
-         if (newPosition.x<oldPosition.x) 
+         else if (newPosition.x<oldPosition.x) 
          {
              spriteRenderer.flipX = false;
              spriteRenderer.sprite = hero3;

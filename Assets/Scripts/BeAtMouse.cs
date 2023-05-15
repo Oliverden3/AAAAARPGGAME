@@ -18,8 +18,7 @@ void Update()
     Vector3 location = new Vector3(worldPosition.x, worldPosition.y, 0f);
     
     transform.position = location;
-    Debug.Log("Mouse true position: " + mousePos);
-    Debug.Log("orb position: " + location);
+
 }
 
 }

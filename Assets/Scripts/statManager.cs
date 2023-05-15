@@ -8,10 +8,12 @@ public class statManager : MonoBehaviour
     public int maxHealth;
     public int damage;
     public float speed;
+    public int currentCoins;
     // Start is called before the first frame update
     void Start()
     {
         setMainCharacter();
+        currentCoins = 0;
     }
 
     // Update is called once per frame
@@ -28,5 +30,9 @@ public class statManager : MonoBehaviour
         df.changeDamage(damage);
         PlayerHealth playerHealth = playerObj.GetComponent<PlayerHealth>();
         playerHealth.BeginningHealth(maxHealth);
+    }
+    public void addCoin(int coinValue){
+        currentCoins =+ coinValue;
+        Debug.Log(currentCoins);
     }
 }
