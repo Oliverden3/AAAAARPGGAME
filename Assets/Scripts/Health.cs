@@ -37,6 +37,8 @@ public class Health : MonoBehaviour
             animator.SetBool("die", true);
             OnDeath.Invoke();
             Destroy(gameObject, 0.7f); // delay of 1 second
+            EnemyBehavior slime = this.GetComponent<EnemyBehavior>();
+            slime.speed = 0;
         }
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyBehavior : MonoBehaviour
 {
@@ -16,10 +17,14 @@ public class EnemyBehavior : MonoBehaviour
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
+    
+    private float stopingdistance = 30f;
+    private bool canDamage = true;
 
     // References
     private Animator anim;
     private PlayerHealth playerHealth;
+
 
     public float speed = 3f; // The speed at which the enemy moves towards the player
 
@@ -56,12 +61,26 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    IEnumerator WaitAMinut(){
+        yield return new WaitForSeconds(0.5f);
+        canDamage = true;
+    }
+
     private void Attack()
     {
+        
+        if(canDamage == true ){
+
         Debug.Log("Attacking player!");
         anim.SetTrigger("meleeAttack");
         DamagePlayer();
         cooldownTimer = attackCooldown;
+        canDamage = false;
+        StartCoroutine(WaitAMinut());
+        }
+        else{
+            Debug.Log("Can't attack");
+        }
     }
 
     private void DamagePlayer()
@@ -77,7 +96,10 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+
+ 
     private void MoveTowardsPlayer()
+    
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer > colliderDistance)
