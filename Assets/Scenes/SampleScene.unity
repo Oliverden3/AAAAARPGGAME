@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3359220467511671126, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5708345160726723513, guid: dfcf0531bac2d1c46a52bb6b0d30aaa1, type: 3}
       propertyPath: m_Name
       value: AndersScene
@@ -304,6 +308,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4864400774891598843, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5862554175079211719, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -347,6 +355,14 @@ PrefabInstance:
     - target: {fileID: 5862554175079211719, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087089074607626092, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7087089074607626092, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7630819977002702229, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_AnchorMax.y
