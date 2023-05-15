@@ -16,7 +16,10 @@ void Update()
     mousePos.z = Mathf.Abs(Camera.main.transform.position.z - transform.position.z);
     Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePos);
     Vector3 location = new Vector3(worldPosition.x, worldPosition.y, 0f);
+    
     transform.position = location;
+    Debug.Log("Mouse true position: " + mousePos);
+    Debug.Log("orb position: " + location);
 }
 
 }
