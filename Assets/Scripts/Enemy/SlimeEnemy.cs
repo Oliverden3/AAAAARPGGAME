@@ -71,6 +71,7 @@ public class SlimeEnemy : MonoBehaviour
        }
 
        return hit.collider != null;
+    
    }
 
 
