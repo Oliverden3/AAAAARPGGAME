@@ -25,6 +25,9 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Start()
     {
+        if (!player)
+            player = GameObject.Find("Player").transform;
+
         anim = GetComponent<Animator>();
         playerHealth = player.GetComponent<PlayerHealth>();
     }
@@ -40,7 +43,7 @@ public class EnemyBehavior : MonoBehaviour
             
             if (distanceToTarget <= attackRange && cooldownTimer <= 0)
             {
-                Debug.Log("Attacking player!");
+                
                 Attack();
             }
             else
@@ -55,6 +58,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Attack()
     {
+        Debug.Log("Attacking player!");
         anim.SetTrigger("meleeAttack");
         DamagePlayer();
         cooldownTimer = attackCooldown;
