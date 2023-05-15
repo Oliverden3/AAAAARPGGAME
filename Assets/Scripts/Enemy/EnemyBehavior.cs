@@ -11,7 +11,7 @@ public class EnemyBehavior : MonoBehaviour
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
-    private float cooldownTimer = Mathf.Infinity;
+    private float cooldownTimer = 2f;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -25,6 +25,9 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Start()
     {
+        if (!player)
+            player = GameObject.Find("Player").transform;
+
         anim = GetComponent<Animator>();
         playerHealth = player.GetComponent<PlayerHealth>();
     }
@@ -35,9 +38,12 @@ public class EnemyBehavior : MonoBehaviour
         {
             float distanceToTarget = Vector2.Distance(transform.position, player.position);
 
+
+    
+            
             if (distanceToTarget <= attackRange && cooldownTimer <= 0)
             {
-                Debug.Log("Attacking player!");
+                
                 Attack();
             }
             else
@@ -52,6 +58,7 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Attack()
     {
+        Debug.Log("Attacking player!");
         anim.SetTrigger("meleeAttack");
         DamagePlayer();
         cooldownTimer = attackCooldown;

@@ -19,6 +19,11 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         Debug.Log(gameObject.name + " is taking " + damage + " damage. Current health: " + currentHealth); // Debug message
 
+        if (animator != null)
+    {
+        animator.SetTrigger("hurt");
+    }
+
         if (currentHealth <= 0)
         {
             Die();

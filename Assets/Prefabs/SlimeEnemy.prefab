@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5204119249372528081}
   - component: {fileID: 5204119249372528080}
   - component: {fileID: 5204119249372528083}
-  - component: {fileID: 5204119249372528082}
-  - component: {fileID: 5204119249372528084}
+  - component: {fileID: 7636837819392371132}
+  - component: {fileID: 8212251844292487032}
   m_Layer: 3
   m_Name: SlimeEnemy
   m_TagString: Enemy
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19240324, y: 0.22224948}
   m_EdgeRadius: 0
---- !u!114 &5204119249372528082
+--- !u!114 &7636837819392371132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,15 +143,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5204119249372528046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: effd5fe99c9ce40df831e7272f4f29cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 284d74a870f8740f8a4907856de5408f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  animator: {fileID: 5204119249372528080}
+  animator: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5204119249372528084
+--- !u!114 &8212251844292487032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,14 +160,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5204119249372528046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e145a87c7aa4d4f80a9af7e999a05c21, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b77322abd424473c85c930f6fb45b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   attackCooldown: 2
-  range: 0
-  colliderDistance: 1.6
+  attackRange: 2
   damage: 2
-  boxCollider: {fileID: 5204119249372528083}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  colliderDistance: 0
+  boxCollider: {fileID: 5204119249372528083}
+  speed: 3
