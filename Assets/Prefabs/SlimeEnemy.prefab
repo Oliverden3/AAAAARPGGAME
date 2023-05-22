@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5204119249372528083}
   - component: {fileID: 7636837819392371132}
   - component: {fileID: 8212251844292487032}
+  - component: {fileID: 7937821997178753180}
   m_Layer: 3
   m_Name: SlimeEnemy
   m_TagString: Enemy
@@ -150,7 +151,19 @@ MonoBehaviour:
   animator: {fileID: 0}
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7937821997178753180}
+        m_TargetAssemblyTypeName: DropGoldCoin, Assembly-CSharp
+        m_MethodName: deathDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8212251844292487032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +186,16 @@ MonoBehaviour:
   colliderDistance: 0
   boxCollider: {fileID: 5204119249372528083}
   speed: 3
+--- !u!114 &7937821997178753180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204119249372528046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da1530cb3f7fba42ae538e7c0bf33ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 6953770144360085110, guid: 4e229f871638e064c986fe885bb4cad1, type: 3}

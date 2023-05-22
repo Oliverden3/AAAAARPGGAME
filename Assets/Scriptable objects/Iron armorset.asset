@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57ce913774ee5ea47a4fe3e2ed1dcb20, type: 3}
   m_Name: Iron armorset
   m_EditorClassIdentifier: 
-  title: 
-  description: 
-  baseCost: 0
+  title: Iron Armor
+  description: +3 Defense
+  baseCost: 75
