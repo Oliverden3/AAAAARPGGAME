@@ -10235,7 +10235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: numWaves
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: spawnRadius
@@ -10247,7 +10247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6384354219449074852, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: numEnemiesPerWave
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6472286195722035396, guid: 3f30b4f5026ea4fadb65335c77637c96, type: 3}
       propertyPath: m_LocalPosition.x
