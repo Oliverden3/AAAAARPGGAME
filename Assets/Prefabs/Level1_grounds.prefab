@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8874877791634872860}
   - component: {fileID: 2284343361524602539}
   - component: {fileID: 296478565112369546}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Pynt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
