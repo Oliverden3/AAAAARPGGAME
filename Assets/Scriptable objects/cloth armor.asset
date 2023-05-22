@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: cloth armor
   m_EditorClassIdentifier: 
   title: Cloth armor
-  description: +1 defence
-  baseCost: 10
+  description: +1 Defense
+  baseCost: 25
