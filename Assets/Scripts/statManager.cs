@@ -32,7 +32,7 @@ public class statManager : MonoBehaviour
         playerHealth.BeginningHealth(maxHealth);
     }
     public void addCoin(int coinValue){
-        currentCoins =+ coinValue;
+        currentCoins = currentCoins+coinValue;
         Debug.Log(currentCoins);
     }
 }
