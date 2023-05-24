@@ -1,6 +1,6 @@
 public class InventorySystem
 {
-    private List<Item> inventoryItems;
+   /* private List<Item> inventoryItems;
 
     public InventorySystem()
     {
@@ -26,4 +26,5 @@ public class InventorySystem
     {
         return inventoryItems;
     }
+    */
 }
