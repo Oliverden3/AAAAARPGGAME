@@ -8,11 +8,11 @@ public class statManager : MonoBehaviour
     public int maxHealth;
     public int damage;
     public float speed;
-    public int currentCoins;
+    public static int currentCoins;
     // Start is called before the first frame update
     void Start()
     {
-        setMainCharacter();
+        SetMainCharacter();
         currentCoins = 0;
     }
 
@@ -21,7 +21,7 @@ public class statManager : MonoBehaviour
     {
         
     }
-    void setMainCharacter(){
+    void SetMainCharacter(){
         playerObj = GameObject.Find("Player");
         PlayerMovement movement = playerObj.GetComponent<PlayerMovement>();
         Transform mainAttack = playerObj.transform.GetChild(0); //Assuming MainAttack is the first child object
@@ -35,7 +35,7 @@ public class statManager : MonoBehaviour
         currentCoins = currentCoins+coinValue;
         Debug.Log(currentCoins);
     }
-    public static int getCoins(){
+    public int GetCoins(){
         return currentCoins;
     }
 }
