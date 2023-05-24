@@ -43,9 +43,9 @@ GameObject:
   m_Component:
   - component: {fileID: 876425890942597157}
   - component: {fileID: 6384354219449074852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemySpawner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,10 +78,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7632984088103185571}
-  spawnRadius: 10
-  numEnemiesPerWave: 5
+  spawnRadius: 12
+  numEnemiesPerWave: 2
   numWaves: 3
-  waveInterval: 5
+  waveInterval: 10
 --- !u!1001 &2437978417883664653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98,12 +98,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5204119249372528047, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.6977286
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204119249372528047, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.0635676
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204119249372528047, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17
+      value: -4.1728
       objectReference: {fileID: 0}
     - target: {fileID: 5204119249372528047, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: -2.2909
       objectReference: {fileID: 0}
     - target: {fileID: 5204119249372528047, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -145,10 +153,18 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 7632984088103185629}
+    - target: {fileID: 7636837819392371132, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 8212251844292487032, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 7632984088103185570}
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212251844292487032, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
+      propertyPath: colliderDistance
+      value: 1.75
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5204119249372528082, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
     - {fileID: 5204119249372528084, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
@@ -163,6 +179,27 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5204119249372528046, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}
   m_PrefabInstance: {fileID: 2437978417883664653}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2052228069
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7632984088103185571}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!95 &7632984088103185629 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5204119249372528080, guid: f5a5da6eeaa254e6da8e525e579f99c2, type: 3}

@@ -9,6 +9,8 @@ public class HealthbarFill : MonoBehaviour
     // Start is called before the first frame update
 
     public void updateHealthBar(int currentHealth, int maxHealth){
-        _healthbarSprite.fillAmount = currentHealth/maxHealth;
+        float currentHealthFloat = (float)currentHealth;
+        float maxHealthFloat = (float)maxHealth;
+        _healthbarSprite.fillAmount = currentHealthFloat/maxHealthFloat;
     }
 }

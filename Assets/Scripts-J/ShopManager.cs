@@ -8,12 +8,14 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {
 
-   public int coins;
+   private GameObject gameManager =  GameObject.Find("GameManager");
+   public int coins = gameManager.GetComponent<statManager>().getCoins;
    public TMP_Text coinUI;
    public ShopItemSO[] shopItemsSO;
    public ShopTemplate[] shopPanels;
    public GameObject[] shopPanelsSO;
    public Button[] myPurchaseBtns;
+
 
 public void CheckPurchaseable()
     {
