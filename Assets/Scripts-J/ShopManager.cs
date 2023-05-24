@@ -54,7 +54,7 @@ CheckPurchaseable();
         shopPanels[i].costTxt.text = "Coins: " + shopItemsSO[i].baseCost.ToString();
     }
    }
-    
+
    public void PurchaseItem(int btnNo)
     {
         if (coins >= shopItemsSO[btnNo].baseCost)
