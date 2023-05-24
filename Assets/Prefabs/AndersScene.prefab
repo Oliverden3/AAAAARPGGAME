@@ -1439,7 +1439,8 @@ Transform:
   m_LocalPosition: {x: 1.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 473295817675394323}
   m_Father: {fileID: 2210384210171522946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
@@ -1551,6 +1552,7 @@ GameObject:
   - component: {fileID: 407565350533129724}
   - component: {fileID: 9104906130066988}
   - component: {fileID: 8530226603367862766}
+  - component: {fileID: 8865748624226004464}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1652,7 +1654,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
