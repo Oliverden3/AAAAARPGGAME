@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public bool isDead;
     private int maxHealth;
     private int currentHealth;
     [SerializeField] private Canvas HealthBarCanvas;
@@ -12,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         healthBar = HealthBarCanvas.GetComponent<HealthbarFill>();
         deathCanvas = GameObject.Find("DeathCanvas");
         deathCanvas.SetActive(false);
@@ -33,6 +35,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void PlayerDeath(){
         Time.timeScale = 0;
+        isDead = true;
         deathCanvas.SetActive(true);
     }
 }
