@@ -5,10 +5,10 @@ using UnityEngine;
 public class statManager : MonoBehaviour
 {
     GameObject playerObj;
-    public static int maxHealth;
-    public static int damage;
-    public static float speed;
-    public static int currentCoins;
+    public int maxHealth;
+    public int damage;
+    public float speed;
+    public int currentCoins;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +31,7 @@ public class statManager : MonoBehaviour
         PlayerHealth playerHealth = playerObj.GetComponent<PlayerHealth>();
         playerHealth.BeginningHealth(maxHealth);
     }
-    public static void addCoin(int coinValue){
+    public void addCoin(int coinValue){
         currentCoins = currentCoins+coinValue;
         Debug.Log(currentCoins);
     }
