@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DamageField : MonoBehaviour
 {
+
     SpriteRenderer spriteR;
     PolygonCollider2D m_Collider;
     bool isAttacking;
     private int damage;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -37,14 +39,13 @@ public class DamageField : MonoBehaviour
         damage = newDamage;
     }
     private void Attack(){
-      spriteR.enabled = true;
         m_Collider.enabled = true;
         isAttacking = true;
         StartCoroutine(WaitASec());
     }
     IEnumerator WaitASec(){
     yield return new WaitForSeconds(0.5f);
-    spriteR.enabled = false;
+    
     m_Collider.enabled = false;
     StartCoroutine(AttackCooldown());
     }

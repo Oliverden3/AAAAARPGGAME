@@ -35,7 +35,7 @@ public class statManager : MonoBehaviour
         currentCoins = currentCoins+coinValue;
         Debug.Log(currentCoins);
     }
-    public int getCoins(){
+    public static int getCoins(){
         return currentCoins;
     }
 }
