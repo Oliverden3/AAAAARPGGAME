@@ -30,7 +30,6 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage){
         currentHealth =  currentHealth-damage;
     healthBar.updateHealthBar(currentHealth,maxHealth);
-    Debug.Log("you took damage "+ currentHealth);
     if(currentHealth<=0){PlayerDeath();}
     }
     public void PlayerDeath(){

@@ -12,7 +12,5 @@ public class HealthbarFill : MonoBehaviour
         float currentHealthFloat = (float)currentHealth;
         float maxHealthFloat = (float)maxHealth;
         _healthbarSprite.fillAmount = currentHealthFloat/maxHealthFloat;
-        Debug.Log("Current maxhealth/currenthealth: "  + currentHealth/maxHealth);
-        Debug.Log("Current Healthbarfill: "  +  _healthbarSprite.fillAmount);
     }
 }

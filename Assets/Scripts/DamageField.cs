@@ -27,9 +27,7 @@ public class DamageField : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("I hit something");
             if (other.gameObject.tag == "Enemy"){
-                Debug.Log("I HIT AN ENEMY");
                Health monsterHP = other.gameObject.GetComponent<Health>();
                monsterHP.TakeDamage(damage);
                Debug.Log(monsterHP.SendCurrentHealth());

@@ -71,15 +71,11 @@ public class EnemyBehavior : MonoBehaviour
         
         if(canDamage == true ){
 
-        Debug.Log("Attacking player!");
         anim.SetTrigger("meleeAttack");
         DamagePlayer();
         cooldownTimer = attackCooldown;
         canDamage = false;
         StartCoroutine(WaitAMinut());
-        }
-        else{
-            Debug.Log("Can't attack");
         }
     }
 
