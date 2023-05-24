@@ -231,6 +231,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1486485004383290408, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486485004383290408, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1676307970445681238, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -282,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 4004676148865364047, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_Name
       value: JonathanScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004676148865364047, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4760100186101515888, guid: b9e23c9dd51dd0a46ad8828346a1059c, type: 3}
       propertyPath: m_AnchorMax.y
