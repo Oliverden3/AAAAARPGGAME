@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 1142258279940067556}
   - component: {fileID: 418644369368717171}
   m_Layer: 6
-  m_Name: Canvas
+  m_Name: BarFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1651,6 +1651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d720d9ce0b78e81468b00b318c437ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttacking: 0
+  soundEffect: {fileID: 0}
 --- !u!60 &1820858603799971692
 PolygonCollider2D:
   m_ObjectHideFlags: 0

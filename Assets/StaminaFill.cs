@@ -18,11 +18,11 @@ public class StaminaFill : MonoBehaviour
     }
     void Update()
     {
-        isAttacking = attack.GetComponent<DamageField>().isAttacking;
+      /*  isAttacking = attack.GetComponent<DamageField>().isAttacking;
         if(isAttacking == true && isUpdating == false){
             isUpdating = true;
             updateStamina();
-        }
+        }*/
         
     }
     public void updateStamina(){
@@ -42,6 +42,5 @@ public class StaminaFill : MonoBehaviour
                  yield return null;
              }
          }
-     isUpdating = false;
      }
 }

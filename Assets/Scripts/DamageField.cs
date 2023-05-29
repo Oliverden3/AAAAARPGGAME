@@ -9,7 +9,7 @@ public class DamageField : MonoBehaviour
     PolygonCollider2D m_Collider;
     public bool isAttacking;
     private int damage;
-
+    GameObject stamina;
     public AudioClip soundEffect;
    
     // Start is called before the first frame update
@@ -20,6 +20,7 @@ public class DamageField : MonoBehaviour
       spriteR.enabled = false;
       m_Collider.enabled = false;
       isAttacking = false;
+      stamina = GameObject.Find("BarFill");
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class DamageField : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isAttacking == false){
         Attack();
+        stamina.GetComponent<StaminaFill>().updateStamina();
       }
         
     }
