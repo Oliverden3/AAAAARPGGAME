@@ -9,6 +9,8 @@ public class DamageField : MonoBehaviour
     PolygonCollider2D m_Collider;
     bool isAttacking;
     private int damage;
+
+    public AudioClip soundEffect;
    
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class DamageField : MonoBehaviour
             if (other.gameObject.tag == "Enemy"){
                Health monsterHP = other.gameObject.GetComponent<Health>();
                monsterHP.TakeDamage(damage);
+              AudioSource.PlayClipAtPoint(soundEffect, transform.position);
                Debug.Log(monsterHP.SendCurrentHealth());
             }
     }
