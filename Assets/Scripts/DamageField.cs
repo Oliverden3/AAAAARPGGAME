@@ -48,13 +48,13 @@ public class DamageField : MonoBehaviour
         m_Collider.enabled = true;
         isAttacking = true;
         StartCoroutine(WaitASec());
+        StartCoroutine(AttackCooldown());
     }
     IEnumerator WaitASec(){
     yield return new WaitForSeconds(0.5f);
     
     m_Collider.enabled = false;
     spriteR.enabled = false;
-    StartCoroutine(AttackCooldown());
     }
     IEnumerator AttackCooldown(){
       yield return new WaitForSeconds(2.0f);

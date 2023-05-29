@@ -38,7 +38,6 @@ public class StaminaFill : MonoBehaviour
              {
                  countUp += Time.smoothDeltaTime;
                  _staminaSprite.fillAmount = countUp/2;
-                 Debug.Log(_staminaSprite.fillAmount);
                  yield return null;
              }
          }
