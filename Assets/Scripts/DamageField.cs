@@ -44,7 +44,7 @@ public class DamageField : MonoBehaviour
         damage = newDamage;
     }
     private void Attack(){
-        spriteR.enabled = true;
+       // spriteR.enabled = true;
         m_Collider.enabled = true;
         isAttacking = true;
         StartCoroutine(WaitASec());
