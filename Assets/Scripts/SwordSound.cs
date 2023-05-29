@@ -19,7 +19,7 @@ public class SwordSound : MonoBehaviour
     void Update()
     {
          if (Input.GetMouseButtonDown(0) && isAttacking == false)
-    {
+    { 
         PlaySound();
     }
     }
