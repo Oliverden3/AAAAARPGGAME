@@ -9,12 +9,14 @@ public class ShopManager : MonoBehaviour
 {
 
    private GameObject gameManager;
-   public int coins = 2; //gameManager.GetComponent<statManager>().getCoins;
+   
    public TMP_Text coinUI;
    public ShopItemSO[] shopItemsSO;
    public ShopTemplate[] shopPanels;
    public GameObject[] shopPanelsSO;
    public Button[] myPurchaseBtns;
+   public int coins;
+   private GameObject StatManager;
 
 
 public void CheckPurchaseable()
@@ -29,6 +31,11 @@ public void CheckPurchaseable()
     }
 void Start()
 {
+StatManager = GameObject.Find("GameManager");
+statManager GoldFinder = StatManager.GetComponent<statManager>();
+coins = GoldFinder.GetCoins();
+
+
     for (int i = 0; i < shopItemsSO.Length; i++)
     {
 shopPanelsSO[i].SetActive(true);
@@ -36,6 +43,9 @@ shopPanelsSO[i].SetActive(true);
 coinUI.text = "coins: " + coins.ToString();
 LoadPanels();
 CheckPurchaseable();
+
+
+
 }
 
    public void AddCoins()
