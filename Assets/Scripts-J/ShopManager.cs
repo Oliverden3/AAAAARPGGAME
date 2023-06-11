@@ -17,6 +17,10 @@ public class ShopManager : MonoBehaviour
    public Button[] myPurchaseBtns;
    public int coins;
    private GameObject StatManager;
+   private statManager stats;
+   public int attackStats;
+   public int hpStats;
+   
 
 
 public void CheckPurchaseable()
@@ -32,8 +36,11 @@ public void CheckPurchaseable()
 void Start()
 {
 StatManager = GameObject.Find("GameManager");
-statManager GoldFinder = StatManager.GetComponent<statManager>();
-coins = GoldFinder.GetCoins();
+stats = StatManager.GetComponent<statManager>();
+coins = stats.GetCoins();
+attackStats = stats.getDamage();
+hpStats = stats.getHealth();
+
 
 
     for (int i = 0; i < shopItemsSO.Length; i++)
@@ -76,7 +83,18 @@ CheckPurchaseable();
         }
     }
 
- 
-
-
+    public void addStats(){
+    
+        for (int i = 0; i < shopItemsSO.Length; i++)
+        {
+            if (coins >= shopItemsSO[i].baseCost){ //if i have enough money.
+                myPurchaseBtns[i].interactable = true;
+                stats.addDamage(shopItemsSO[i].attackValue);
+                stats.addHealth(shopItemsSO[i].hpValue);
+            }
+            else{
+                myPurchaseBtns[i].interactable = false;
+            }
+        }
+    }
 }

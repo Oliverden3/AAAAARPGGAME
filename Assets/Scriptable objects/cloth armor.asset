@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: cloth armor
   m_EditorClassIdentifier: 
   title: Cloth armor
-  description: +1 Defense
+  description: +1 hp
   baseCost: 25
+  attackValue: 0
+  hpValue: 1000000
