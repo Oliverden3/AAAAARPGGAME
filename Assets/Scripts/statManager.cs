@@ -38,18 +38,21 @@ public class statManager : MonoBehaviour
     }
     public void addDamage(int damageValue){
     damage = damage+damageValue;
+    SetMainCharacter();
     }
     public int getDamage(){
         return damage;
     }
     public void addHealth(int healthValue){
     maxHealth = maxHealth+healthValue;
+    SetMainCharacter();
     }
     public int getHealth(){
         return maxHealth;
     }
     public void addSpeed(float speedValue){
     speed = speed+speedValue;
+    SetMainCharacter();
     }
     public float getSpeed(){
         return speed;
