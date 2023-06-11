@@ -79,6 +79,7 @@ CheckPurchaseable();
             coins = coins - shopItemsSO[btnNo].baseCost;
             coinUI.text = "Coins: " + coins.ToString();
             CheckPurchaseable();
+            addStats();
             //Unlock Item.
         }
     }
