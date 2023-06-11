@@ -8,7 +8,7 @@ public class statManager : MonoBehaviour
     public int maxHealth;
     public int damage;
     public float speed;
-    public static int currentCoins;
+    public static int currentCoins = 200;
     // Start is called before the first frame update
     void Start()
     {
