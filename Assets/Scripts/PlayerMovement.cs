@@ -5,14 +5,14 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     private Rigidbody2D rb2d;
     private Vector2 movement;
-    private gameObject gameManager;
+    private GameObject gameManager;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager");
         statManager toSpeed = gameManager.GetComponent<statManager>();
-        speed = toSpeed.getSpeed;
+        speed = toSpeed.getSpeed();
     }
 
     void Update()
