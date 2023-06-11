@@ -40,7 +40,7 @@ public class statManager : MonoBehaviour
     damage = damage+damageValue;
     }
     public int getDamage(){
-        return damage
+        return damage;
     }
     public void addHealth(int healthValue){
     maxHealth = maxHealth+healthValue;
