@@ -20,4 +20,8 @@ public class loadSceneAdjustable : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(designatedScene);
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(designatedScene);
+        }
 }

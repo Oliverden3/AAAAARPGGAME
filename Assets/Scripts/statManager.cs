@@ -13,7 +13,6 @@ public class statManager : MonoBehaviour
     void Start()
     {
         SetMainCharacter();
-        currentCoins = 0;
     }
 
     // Update is called once per frame
