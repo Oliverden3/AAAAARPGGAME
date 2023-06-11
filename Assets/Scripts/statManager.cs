@@ -32,9 +32,26 @@ public class statManager : MonoBehaviour
     }
     public void addCoin(int coinValue){
         currentCoins = currentCoins+coinValue;
-        Debug.Log(currentCoins);
     }
     public int GetCoins(){
         return currentCoins;
+    }
+    public void addDamage(int damageValue){
+    damage = damage+damageValue;
+    }
+    public int getDamage(){
+        return damage
+    }
+    public void addHealth(int healthValue){
+    maxHealth = maxHealth+healthValue;
+    }
+    public int getHealth(){
+        return maxHealth;
+    }
+    public void addSpeed(float speedValue){
+    speed = speed+speedValue;
+    }
+    public float getSpeed(){
+        return speed;
     }
 }

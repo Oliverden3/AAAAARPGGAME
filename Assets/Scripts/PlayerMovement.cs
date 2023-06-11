@@ -2,19 +2,21 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f; // movement speed in units per second
-
+    private float speed;
     private Rigidbody2D rb2d;
     private Vector2 movement;
+    private gameObject gameManager;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager");
+        statManager toSpeed = gameManager.GetComponent<statManager>();
+        speed = toSpeed.getSpeed;
     }
 
     void Update()
     {
-        // read input axes
     }
 
     void FixedUpdate()
