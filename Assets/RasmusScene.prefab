@@ -81,7 +81,7 @@ MonoBehaviour:
   spawnRadius: 12
   numEnemiesPerWave: 2
   numWaves: 3
-  waveInterval: 10
+  waveInterval: 5
 --- !u!1001 &2437978417883664653
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -45,7 +45,7 @@ public class SlimeEnemy : MonoBehaviour
                 Attack();
             }
         }
-        else if(slimePatrol != null)
+        else if (slimePatrol != null)
         {
             slimePatrol.enabled = true; // Resume moving when not in sight
 
